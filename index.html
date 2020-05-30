@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -65,6 +66,10 @@
     background-color: #f5f5f5;
   }
 
+  li {
+    padding-top: 0.5em;
+  }
+
 
   /* Custom page CSS
   -------------------------------------------------- */
@@ -83,6 +88,10 @@
     color: #ffffff;
   }
 
+  #question {
+    line-height: 1.5em;
+  }
+
     </style>
 
   </head>
@@ -91,28 +100,6 @@
     <!-- <nav class="navbar navbar-expand-md navbar-warning sticky-top bg-warning"> -->
       <nav class="navbar navbar-expand-md  navbar-dark  fixed-top bg-dark">
        <a class="navbar-brand" href="/"><img src="icon.png" width="30" height="30" class="d-inline-block align-top mr-2" alt=""> <b>CheckGesprek</b> <span id="venue"></span></a>
-       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button> -->
-       <!-- <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav ml-auto">
-           <li class="nav-item">
-             <button class="btn btn-lg btn-dark" onclick="factoryReset()"><i class="fas fa-trash"></i></button>
-           </li>
-           <li class="nav-item">
-             <button class="btn btn-lg btn-dark" onclick="showLogs()"><i class="fas fa-terminal"></i></button>
-           </li>
-           <li class="nav-item">
-             <button class="btn btn-lg btn-dark" onclick="toggleMute()" id="toggleMute"><i class="fas fa-volume-mute"></i></button>
-           </li>
-           <li class="nav-item">
-             <button class="btn btn-lg btn-dark" onclick="powerOff()" ><i class="fas fa-comment-slash"></i></button>
-           </li>
-           <li class="nav-item">
-             <button class="btn btn-lg btn-dark" onclick="powerOn()" ><i class="fas fa-power-off"></i></button>
-           </li>
-         </ul>
-       </div>-->
      </nav>
 
 
@@ -121,21 +108,20 @@
           <div class="col-12">
 
             <div id="explain">
-              <p>Welkom bij het CheckGesprek. Hieronder vind je een aantal vragen die in het kader van de Gezondheidscheck moeten worden gesteld aan bezoekers en medewerkers.
-                <a class="" data-toggle="collapse" href="#collapseExplain" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Lees meer over uw privacy
-                </a>
-              </p>
-              <div class="collapse mb-3" id="collapseExplain">
-                <div class="card card-body">
+              <p><span id="explain_intro">Welkom bij het CheckGesprek. In deze zelftest vind je een aantal vragen die in het kader van de Gezondheidscheck moeten worden gesteld aan bezoekers en medewerkers.</span> <a class="" data-toggle="collapse" href="#collapseReadMore" role="button" aria-expanded="false" aria-controls="collapseReadMore">
+                  <span id="explainlink">Lees meer over uw privacy</span>
+                </a></p>
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg" onclick="startCheck()" id="explain_start">Start CheckGesprek</button><h3 id="languages" class="mt-3">🇱</h3>
+              </div>
+              <div class="collapse mb-3 mt-3" id="collapseReadMore">
+                <div class="card card-body" id="explain_body">
                   <p>De code van deze pagina is volledig opensource &amp; inzichtelijk (en downloadbaar en herbruikbaar!) en kunt u hier terug vinden.</p>
                   <p>Vanuit het oogpunt zo veilig mogelijk om te gaan met gevoelige data, wordt NIKS van deze webpagina opgeslagen.</p>
                   <p>Elke handeling die u op deze pagina pleegt, wordt alleen op deze pagina verwerkt. Indien u niet vertrouwd op <del>mijn blauwe ogen</del> deze pixels: verbreek gerust de verbinding met internet door bijvoorbeeld uw telefoon in airplane modus te zetten.</p>
                 </div>
               </div>
-              <div class="text-center">
-                <button class="btn btn-primary btn-lg" onclick="startCheck()">Start CheckGesprek</button>
-              </div>
+
             </div>
 
 
@@ -150,7 +136,7 @@
                      <div id="progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">20%</div>
                    </div>
 
-                  <h4 id="question" class="text-center lead mt-3"></h4>
+                  <h4 id="question" class="text-left lead mt-3"></h4>
 
                 </div>
 
@@ -178,7 +164,7 @@
             <h3 id="resultunder"></h3>
           </div>
           <div class="modal-footer margin-auto">
-            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reset()">Reset</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="resetit()">Reset</button>
           </div>
         </div>
       </div>
@@ -188,7 +174,7 @@
     <footer class="footer">
         <div class="container text-center">
 
-            <span class="text-muted">open-source, gratis, tracking vrij, tracing vrij (by <a href="https://waits.app">Waits.App</a>)</span>
+            <span class="text-muted"><a href="https://github.com/WaitsApp-Open/checkgesprek">Open source</a> by <a href="https://waits.app">Waits.App</a></span>
 
         </div>
     </footer>
@@ -226,9 +212,34 @@
                        "Heb je een huisgenoot/gezinslid met het nieuwe coronavirus (vastgesteld met een laboratoriumtest) en heb je korter dan 14 dagen geleden contact gehad met deze huisgenoot/gezinslid terwijl hij/zij nog klachten had?",
                        "Ben je in thuisisolatie omdat je direct contact hebt gehad met iemand waarbij het nieuwe coronavirus is vastgesteld?"
                      ],
-                "a": ["ja","nee"]
+                "a": ["ja","nee"],
+                "explain": {
+                  "intro":'Welkom bij het CheckGesprek. Hieronder vind je een aantal vragen die in het kader van de Gezondheidscheck moeten worden gesteld aan bezoekers en medewerkers.',
+                  "bodytxt":'<ul><li>Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webpagina opgeslagen.</li><li>Tevens vraagt deze pagina NIET om op een locatie in te checken of uw gegevens achter te laten, bijvoorbeeld ten behoeve van contactonderzoek. Contactonderzoek is onzer mening na iets voor een opt-in contact-tracing app gebouwd door een overheidsinitiatief zonder winstoogmerk, met de hoogst mogelijke vorm van privacy waarborgen en met auditing in elk mogellijke vorm.</li><li>Elke handeling die u op deze pagina pleegt, wordt alleen op deze pagina verwerkt. <i>En dus nergens naar toe verzonden of opgeslagen</i>.</li><li>De broncode van deze pagina is volledig <a href="https://github.com/WaitsApp-Open/checkgesprek">opensource &amp; inzichtelijk</a> (en downloadbaar en herbruikbaar!) en kunt u <a href="https://github.com/WaitsApp-Open/checkgesprek">hier</a> terug vinden.</li><li>Indien u niet vertrouwd op <del>mijn blauwe ogen</del> deze pixels: verbreek gerust de verbinding met internet door bijvoorbeeld uw telefoon in airplane modus te zetten. U zult zien dat de functionaliteit blijft.</li></ul>',
+                  "readmore":'Uw privacy is belangrijk. Echt!',
+                  "startbutton": "Start CheckGesprek"
+                },
+                "emoji": "🇳🇱"
+              },
+
+      "en": {
+            "q": [
+                      "Have you had one or more of the following (mild) complaints in the past 24 hours or at this time: colds, cough, shortness of breath and / or fever (from 38 degrees Celsius)?",
+                      "Do you currently have a roommate / family member with a fever and / or shortness of breath?",
+                      "Have you had the new coronavirus (diagnosed with a laboratory test) and has it been diagnosed in the past 7 days?",
+                      "Did you have a roommate / family member with the new coronavirus (determined by a laboratory test) and did you have contact with this roommate / family member less than 14 days ago while he / she still had complaints?",
+                      "Are you in home isolation because you have had direct contact with someone diagnosed with the new coronavirus?"
+                ],
+                "a": ["yes","no"],
+                "explain": {
+                  "intro":'Welcome to the Health Chat Conversation. In this self test you will find a number of questions that must be asked to visitors and employees in the context of the Health Check.',
+                  "bodytxt":'<ol><li>Since these Health Chat Conversations deal with medical personal data, highly sensitive, NOTHING on this page is recorded or stored.</li><li>Also, this page does NOT ask to check in at a location or leave your details, for example for contact research. Contact tracing is our opinion a dedicated task for an opt-in contact-tracing app built by a non-profit government initiative, with the highest possible level of privacy safeguards and auditing in every possible form.</li><li>Any action you perform on this page will solely be processed on this page only via so-called client-side code (meaning: on your device, not online). And therefore not sent or stored anywhere.</li><li>The source code of this page is <a href="https://github.com/WaitsApp-Open/checkgesprek">fully open source</a> &amp; transparent (and downloadable and reusable!) And can be found <a href="https://github.com/WaitsApp-Open/checkgesprek">here</a>.</li><li>You will see that the functionality remains even if you disconnect from the internet by, for example, putting your phone in airplane mode.</li></ol>',
+                  "readmore":'Your privacy matters',
+                  "startbutton": 'Start Health Check'
+                },
+                "emoji": "🇬🇧"
               }
-     };
+          };
 
 
       // answers holds an array with the answers given by the guest
@@ -285,7 +296,6 @@
       }
 
       function answer(val) {
-        console.log(val);
 
         answers[currentquestion] = val;
 
@@ -306,7 +316,7 @@
           updateProgressbar();
           calculateResult();
         } else {
-          console.log(questions[language].q[currentquestion]);
+
           $("#question").text(questions[language].q[currentquestion]);
           updateProgressbar();
         }
@@ -334,22 +344,18 @@
 
       function drawResult(result) {
 
-
-
-        //console.log("res", result);
         if(result === "FAIL") {
           $('#resultimg').attr('src', 'fail.png');
           $('#resultbody').addClass('bg-danger');
         } else {
           $('#resultimg').attr('src', 'pass.png');
           $('#resultbody').addClass('bg-success');
-
         }
 
         $('#resultunder').text(result);
 
         if(venue) {
-            $('#resulttitle').text(venue);
+            $('#resulttitle').text(decodeURIComponent(venue));
         } else {
             $('#resulttitle').text(result);
         }
@@ -365,12 +371,20 @@
 
       }
 
-      function reset() {
+      function resetit() {
         // reset questions
+        try {
+          clearInterval(updateTime);
+        } catch (err) { }
         currentquestion = 0;
 
         // reset answers
         answers = [];
+
+        drawUI();
+      }
+
+      function drawUI() {
 
         updateProgressbar();
 
@@ -378,12 +392,32 @@
         $('#resultbody').removeClass('bg-danger').removeClass('bg-success');
         // show explainer.
         $('#explain').show();
-        // hide testblock;
+        // // hide testblock;
         $('#testblock').hide();
+
+        // fill texts
+        $('#explain_intro').html(questions[language].explain.intro);
+        $('#explain_body').html(questions[language].explain.bodytxt);
+        $('#explainlink').text(questions[language].explain.readmore);
+        $('#explain_start').text(questions[language].explain.startbutton)
+
+        $('#languages').html('');
+        for(var lang in questions) {
+          if(lang != language) {
+
+            $('#languages').append("<button class='btn btn-lg btn-link' onclick='setLanguage(\""+lang+"\")'>"+questions[lang].emoji+"</button>");
+          }
+        }
+
       }
 
-      function setLanguage(language) {
+      function setLanguage(lan) {
 
+        if(questions.hasOwnProperty(lan)){
+          language = lan;
+        }
+
+        resetit();
       }
 
       var getQueryString = function ( field, url ) {
@@ -395,13 +429,17 @@
 
       $(document).ready(function() {
 
-        //
         venue = getQueryString("venue");
 
         if(venue) {
           $('#venue').text("> "+decodeURIComponent(venue));
-
         }
+
+        if(getQueryString("lang")) {
+          language = getQueryString("lang");
+        }
+
+        setLanguage(language);
 
       });
 
