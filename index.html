@@ -123,12 +123,12 @@
             <div id="explain">
               <p>Welkom bij het CheckGesprek. Hieronder vind je een aantal vragen die in het kader van de Gezondheidscheck moeten worden gesteld aan bezoekers en medewerkers.
                 <a class="" data-toggle="collapse" href="#collapseExplain" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Meer uitleg
+                  Lees meer over uw privacy
                 </a>
               </p>
               <div class="collapse mb-3" id="collapseExplain">
                 <div class="card card-body">
-                  <p>De code van deze pagina is volledig opensource inzichtelijk (en downloadbaar en herbruikbaar!) en kunt u hier terug vinden.</p>
+                  <p>De code van deze pagina is volledig opensource &amp; inzichtelijk (en downloadbaar en herbruikbaar!) en kunt u hier terug vinden.</p>
                   <p>Vanuit het oogpunt zo veilig mogelijk om te gaan met gevoelige data, wordt NIKS van deze webpagina opgeslagen.</p>
                   <p>Elke handeling die u op deze pagina pleegt, wordt alleen op deze pagina verwerkt. Indien u niet vertrouwd op <del>mijn blauwe ogen</del> deze pixels: verbreek gerust de verbinding met internet door bijvoorbeeld uw telefoon in airplane modus te zetten.</p>
                 </div>
@@ -212,6 +212,8 @@
      var answers = [];
 
      var starttime = 0;
+
+     var venue;
 
 
      var questions = {
@@ -345,7 +347,12 @@
         }
 
         $('#resultunder').text(result);
-        $('#resulttitle').text(result);
+
+        if(venue) {
+            $('#resulttitle').text(venue);
+        } else {
+            $('#resulttitle').text(result);
+        }
 
         $('#result_dialog').modal(
           {
@@ -389,10 +396,11 @@
       $(document).ready(function() {
 
         //
-        var venue = getQueryString("venue");
+        venue = getQueryString("venue");
 
         if(venue) {
           $('#venue').text("> "+decodeURIComponent(venue));
+
         }
 
       });
