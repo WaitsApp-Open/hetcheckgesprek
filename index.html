@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="whatsapp, social, queue, reservation, checkin, covid, hospitality, hotel, restaurant, bar">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Waits.App">
+
+    <!-- Primary Meta Tags -->
+    <!-- Dit zijn instructies die vaak door zoekmachines worden geinterpreteerd om de weergave van een zoekresultaat te vertonen  -->
+    <title>CheckGesprek</title>
+    <meta name="title" content="Waits.App's Gratis Checkgesprek / Gezondheidscheck voor bedrijven">
+    <meta name="description" content="Open Source - Privacy respecterend Gratis CheckGesprek / Gezondheidscheck voor bedrijven en instellingen. Samen verslaan we corona!">
+
+    <!-- Open Graph / Facebook / -->
+    <!-- Dit betekent niet dat facebook uw bezoek op deze pagina nu tracked, maar door deze kenmerken mee te geven wordt de pagina in newsfeeds opgemaakt zoals we willen -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://waits.app/checkgesprek">
+    <meta property="og:title" content="Waits.App's Gratis Checkgesprek / Gezondheidscheck voor bedrijven">
+    <meta property="og:description" content="Open Source - Privacy respecterend Gratis CheckGesprek / Gezondheidscheck voor bedrijven en instellingen. Samen verslaan we corona!">
+    <meta property="og:image" content="https://waits.app/img/social-waitsapp.png">
+
+    <!-- Twitter -->
+    <!-- Dit betekent niet dat twitter uw bezoek op deze pagina nu tracked, maar door deze kenmerken mee te geven wordt de pagina in newsfeeds opgemaakt zoals we willen -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://waits.app/checkgesprek">
+    <meta property="twitter:title" content="Waits.App's Gratis Checkgesprek / Gezondheidscheck voor bedrijven">
+    <meta property="twitter:description" content="Open Source - Privacy respecterend Gratis CheckGesprek / Gezondheidscheck voor bedrijven en instellingen. Samen verslaan we corona!">
+    <meta property="twitter:image" content="https://waits.app/img/social-waitsapp.png">
+
+    <!--====== Favicon Icon ======-->
+    <!-- Dit zijn instructies om die "gezellige icoontjes" in je address balk op je browser te vertonen. Ook bepaald dit het icoontje voor de "homescreen" mocht je besluiten deze pagina op te slaan daar op. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#775dff">
+    <meta name="msapplication-TileColor" content="#775dff">
+    <meta name="theme-color" content="#775dff">
+    <!-- Bootstrap CSS -->
+    <!-- CSS is een methode om webpaginas op te maken. Hieronder wordt gelinked naar het standaard opmaakbestand van het framework dat wordt gebruikt voor deze pagina -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Naast de standaard CSS opmaak van het framework Bootstrap, zijn een aantal elementen op deze pagina aangepast. Die aanpassingen zie je in het codeblock hieronder -->
+    <style type="text/css">
+
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+
+
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+  body > .container {
+    padding: 60px 15px 0;
+  }
+
+  .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  #resultbody {
+    color: #ffffff;
+  }
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- <nav class="navbar navbar-expand-md navbar-warning sticky-top bg-warning"> -->
+      <nav class="navbar navbar-expand-md  navbar-dark  fixed-top bg-dark">
+       <a class="navbar-brand" href="/"><img src="icon.png" width="30" height="30" class="d-inline-block align-top mr-2" alt=""> <b>CheckGesprek</b> <span id="venue"></span></a>
+       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button> -->
+       <!-- <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+             <button class="btn btn-lg btn-dark" onclick="factoryReset()"><i class="fas fa-trash"></i></button>
+           </li>
+           <li class="nav-item">
+             <button class="btn btn-lg btn-dark" onclick="showLogs()"><i class="fas fa-terminal"></i></button>
+           </li>
+           <li class="nav-item">
+             <button class="btn btn-lg btn-dark" onclick="toggleMute()" id="toggleMute"><i class="fas fa-volume-mute"></i></button>
+           </li>
+           <li class="nav-item">
+             <button class="btn btn-lg btn-dark" onclick="powerOff()" ><i class="fas fa-comment-slash"></i></button>
+           </li>
+           <li class="nav-item">
+             <button class="btn btn-lg btn-dark" onclick="powerOn()" ><i class="fas fa-power-off"></i></button>
+           </li>
+         </ul>
+       </div>-->
+     </nav>
+
+
+     <div class="container">
+       <div class="row mt-3">
+          <div class="col-12">
+
+            <div id="explain">
+              <p>Welkom bij het CheckGesprek. Hieronder vind je een aantal vragen die in het kader van de Gezondheidscheck moeten worden gesteld aan bezoekers en medewerkers.
+                <a class="" data-toggle="collapse" href="#collapseExplain" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Meer uitleg
+                </a>
+              </p>
+              <div class="collapse mb-3" id="collapseExplain">
+                <div class="card card-body">
+                  <p>De code van deze pagina is volledig opensource inzichtelijk (en downloadbaar en herbruikbaar!) en kunt u hier terug vinden.</p>
+                  <p>Vanuit het oogpunt zo veilig mogelijk om te gaan met gevoelige data, wordt NIKS van deze webpagina opgeslagen.</p>
+                  <p>Elke handeling die u op deze pagina pleegt, wordt alleen op deze pagina verwerkt. Indien u niet vertrouwd op <del>mijn blauwe ogen</del> deze pixels: verbreek gerust de verbinding met internet door bijvoorbeeld uw telefoon in airplane modus te zetten.</p>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg" onclick="startCheck()">Start CheckGesprek</button>
+              </div>
+            </div>
+
+
+            <div id="testblock" style="display:none;">
+
+
+              <div class="card card-block">
+
+                 <div class="card-body">
+
+                   <div class="progress">
+                     <div id="progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">20%</div>
+                   </div>
+
+                  <h4 id="question" class="text-center lead mt-3"></h4>
+
+                </div>
+
+                <div class="card-footer text-center">
+                  <button class="btn btn-danger mr-3" id="buttrue" onclick="answer(true)">Ja</button> <button class="btn btn-success" id="butfalse" onclick="answer(false)">Nee</button>
+                </div>
+
+              </div>
+
+             </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="result_dialog" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="resulttitle"></h5>
+
+          </div>
+          <div class="modal-body text-center" id="resultbody">
+            <p class="mt-2"><span id="timeago"></span></p>
+            <img src="" class="img-fluid mt-3 mb-5" id="resultimg" />
+            <h3 id="resultunder"></h3>
+          </div>
+          <div class="modal-footer margin-auto">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container text-center">
+
+            <span class="text-muted">open-source, gratis, tracking vrij, tracing vrij (by <a href="https://waits.app">Waits.App</a>)</span>
+
+        </div>
+    </footer>
+    <!-- library voor eenvoudige javascript functies. MIT licentie -->
+     <script src="jquery.min.js"></script>
+
+     <!-- library met javascript functies voor de user interface. MIT licentie -->
+     <script src="bootstrap.min.js"></script>
+
+     <!-- code voor checkgesprek -->
+
+     <script type="text/javascript">
+
+     var defaultlang = "nl";
+
+     var language = defaultlang;
+
+     var timer;
+
+     var currentquestion = 0;
+     var answers = [];
+
+     var starttime = 0;
+
+
+     var questions = {
+
+       "nl":  {
+              "q": [
+                       "Heb je de afgelopen 24 uur of op dit moment één of meerdere van de volgende (milde) klachten: neusverkoudheid, hoesten, benauwdheid en/of koorts (vanaf 38 graden Celsius)?",
+                       "Heb je op dit moment een huisgenoot/gezinslid met koorts en/of benauwdheidsklachten?",
+                       "Heb je het nieuwe coronavirus gehad (vastgesteld met een laboratoriumtest) en is dit in de afgelopen 7 dagen vastgesteld?",
+                       "Heb je een huisgenoot/gezinslid met het nieuwe coronavirus (vastgesteld met een laboratoriumtest) en heb je korter dan 14 dagen geleden contact gehad met deze huisgenoot/gezinslid terwijl hij/zij nog klachten had?",
+                       "Ben je in thuisisolatie omdat je direct contact hebt gehad met iemand waarbij het nieuwe coronavirus is vastgesteld?"
+                     ],
+                "a": ["ja","nee"]
+              }
+     };
+
+
+      // answers holds an array with the answers given by the guest
+
+
+      function timeSince(date) {
+
+        if (typeof date !== 'object') {
+          date = new Date(date*1000);
+        }
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+
+        var interval = Math.floor(seconds / 31536000);
+
+        if (interval > 1) {
+          return interval + " year";
+        }
+        interval = Math.floor(seconds / 2592000);
+        if (interval > 1) {
+          return interval + " min";
+        }
+        interval = Math.floor(seconds / 86400);
+        if (interval > 1) {
+          return interval + " day";
+        }
+        interval = Math.floor(seconds / 3600);
+        if (interval > 1) {
+          return interval + " hr";
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval > 1) {
+          return interval + " min";
+        }
+        return Math.floor(seconds) + " sec";
+      }
+
+
+      function startCheck() {
+          // fill question
+          nextQuestion();
+
+          // fill language answer yes/no
+
+          $('#buttrue').text(questions[language].a[0]);
+          $('#butfalse').text(questions[language].a[1]);
+
+          // hide explainer.
+
+          $('#explain').hide();
+          $('#testblock').show();
+          // showcheck
+
+      }
+
+      function answer(val) {
+        console.log(val);
+
+        answers[currentquestion] = val;
+
+        currentquestion++;
+        nextQuestion();
+      }
+
+      function updateProgressbar() {
+        var pw = currentquestion / questions[language].q.length * 100;
+        $('#progress').attr('style','width: '+pw+'%').text(pw+'%');
+      }
+
+      function nextQuestion() {
+
+        if(currentquestion >= questions[language].q.length) {
+          // no more questsions.
+          // caculate result
+          updateProgressbar();
+          calculateResult();
+        } else {
+          console.log(questions[language].q[currentquestion]);
+          $("#question").text(questions[language].q[currentquestion]);
+          updateProgressbar();
+        }
+      }
+
+      function updateTime() {
+        $('#timeago').text(timeSince(starttime));
+      }
+
+      function calculateResult() {
+
+        starttime = new Date();
+
+        for(k in answers) {
+          if(answers[k]) {
+            // some value is truthy, user will not pass check.
+            return drawResult("FAIL");
+
+            break;
+          }
+        }
+
+        return drawResult("PASS");
+      }
+
+      function drawResult(result) {
+
+
+
+        //console.log("res", result);
+        if(result === "FAIL") {
+          $('#resultimg').attr('src', 'fail.png');
+          $('#resultbody').addClass('bg-danger');
+        } else {
+          $('#resultimg').attr('src', 'pass.png');
+          $('#resultbody').addClass('bg-success');
+
+        }
+
+        $('#resultunder').text(result);
+        $('#resulttitle').text(result);
+
+        $('#result_dialog').modal(
+          {
+          backdrop: 'static',
+          keyboard: false
+          }
+        ).modal('show');
+
+        setInterval(updateTime, 1000);
+
+      }
+
+      function reset() {
+        // reset questions
+        currentquestion = 0;
+
+        // reset answers
+        answers = [];
+
+        updateProgressbar();
+
+        // remove background testresult;
+        $('#resultbody').removeClass('bg-danger').removeClass('bg-success');
+        // show explainer.
+        $('#explain').show();
+        // hide testblock;
+        $('#testblock').hide();
+      }
+
+      function setLanguage(language) {
+
+      }
+
+      var getQueryString = function ( field, url ) {
+      	var href = url ? url : window.location.href;
+      	var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+      	var string = reg.exec(href);
+      	return string ? string[1] : null;
+      };
+
+      $(document).ready(function() {
+
+        //
+        var venue = getQueryString("venue");
+
+        if(venue) {
+          $('#venue').text("> "+decodeURIComponent(venue));
+        }
+
+      });
+
+
+     </script>
+  </body>
+  </html>
