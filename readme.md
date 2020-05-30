@@ -7,9 +7,9 @@
 
 
 ## De echt privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
-### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](https://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
+### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](http://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
 
-**Omdat er momenteel een wildgroei aan Corona apps ontstaan die in sommige gevallen lijken "te vergeten" rekening te houden met de privacy** van potentieel onwetende gebruikers en mogelijke onbedoelde technologische ontwetendheid vond Waits.App het belangrijk een gratis downloadbare en tevens [online toegankelijke](https://hetcheckgesprek.nl) Check Gesprek app ter beschikking te stellen.
+**Omdat er momenteel een wildgroei aan Corona apps ontstaan die in sommige gevallen lijken "te vergeten" rekening te houden met de privacy** van potentieel onwetende gebruikers en mogelijke onbedoelde technologische ontwetendheid vond Waits.App het belangrijk een gratis downloadbare en tevens [online toegankelijke](http://hetcheckgesprek.nl) Check Gesprek app ter beschikking te stellen.
 
 Deze checkgesprek app is een javascript aangestuurde pagina. Javascript is een programmeer taal die haar functionaliteiten "client-side", dat wil zeggen in de browser van de gebruiker uitvoert, zonder hiervoor afhankelijk te zijn van een internetverbinding, of data dient te versturen naar een server over een online verbinding.
 
@@ -24,7 +24,7 @@ Want waarom zou je bij een horeca zaak inchecken en je contact gegevens achterla
 
 ### Hoe kunt u de CheckGesprek app inzetten?
 
-- U kunt linken naar de door ons gehoste versie op https://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten: `venue=UW NAAM` en `lang=nl` waarbij momenteel lang (language) in 2 talen beschikbaar is: en(gels) en nl.
+- U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten: `venue=UW NAAM` en `lang=nl` waarbij momenteel lang (language) in 2 talen beschikbaar is: en(gels) en nl.
 
 - U kunt er ook voor kiezen hierboven op "download" te drukken en de zip die u krijgt in zijn geheel op uw domein te plaatsen. De checkgesprek app zal dan werken door naar `uwdomain.nl/folder_van_checkgesprek` te gaan. *Indien u van deze optie gebruik maakt vragen we u vriendelijk de link naar "waits.app" onderin de app te laten staan.*
 
