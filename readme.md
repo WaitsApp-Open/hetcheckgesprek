@@ -9,6 +9,8 @@
 ## De echt privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
 ### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](http://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
 
+<img style="float: right;" align="right" width="250" src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/preview.png" />
+
 **Omdat er momenteel een wildgroei aan Corona apps ontstaat die in sommige gevallen lijken "te vergeten" rekening te houden met de privacy** van potentieel onwetende gebruikers vond Waits.App het belangrijk een gratis downloadbare en tevens [online toegankelijke](http://hetcheckgesprek.nl) CheckGesprek app gratis en volledig inzichtelijk ter beschikking te stellen.
 
 Deze checkgesprek app is een javascript aangestuurde pagina. Javascript is een programmeertaal die haar functionaliteiten "client-side", dat wil zeggen in de browser van de gebruiker uitvoert, zonder hiervoor afhankelijk te zijn van een internetverbinding, of data dient te versturen naar een server over een online verbinding.
