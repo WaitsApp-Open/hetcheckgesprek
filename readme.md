@@ -1,9 +1,9 @@
 ### **In het kort:**
 
 - [x] Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webapp opgeslagen.
-- [x] Er zit ook geen analytics of tracking codes ingebouwd in deze pagina.
+- [x] Er zit ook géén analytics of tracking codes ingebouwd in deze pagina.
 - [x] Tevens vraagt deze pagina NIET om op een locatie in te checken of uw gegevens achter te laten, bijvoorbeeld ten behoeve van contactonderzoek.
-- [x] Elke handeling die u op deze app pleegt, wordt alleen op de lokale pagina in de browser verwerkt. En dus nergens naar toe verzonden of opgeslagen.
+- [x] Elke handeling die u op deze app pleegt, wordt alléén op de lokale pagina in de browser verwerkt. En dus nergens naar toe verzonden of opgeslagen.
 - [x] **[Klik hier](#hoe-kunt-u-de-checkgesprek-app-inzetten) voor de [installatie/gebruiks-instructies](#hoe-kunt-u-de-checkgesprek-app-inzetten)**
 &nbsp;
 
@@ -29,9 +29,9 @@ Deze checkgesprek app is een javascript aangestuurde pagina. Javascript is een p
 ### De twee manieren om CheckGesprek te gebruiken:
 
 1. U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten:
-    *  `venue=UW NAAM` (urlencode deze bij voorkeur)
-    *  `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
-    *  Bijvoorbeeld een volledige url voor L'Escargot met voorkeurstaal Frans: `http://hetcheckgesprek.nl?venue=La%20Parissienne&lang=fr`
+    *  `venue=UW NAAM`
+    *  `lang=nl` (4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*)
+    *  Voorbeeld: `http://hetcheckgesprek.nl?venue=La%20Parissienne&lang=fr`
 
 2. U kunt ook uw eigen versie hosten. Klik hiervoor op "[download](https://github.com/WaitsApp-Open/hetcheckgesprek/archive/master.zip)" pak  de zip uit en plaats die vervolgens in zijn geheel op uw domein. De checkgesprek app zal dan direct werken door naar `uwdomein.nl/folder_van_checkgesprek` te gaan.
 
