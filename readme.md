@@ -11,7 +11,7 @@
 # De *écht* privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
 ### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](http://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
 
-<img style="float: right;" align="right" width="400" src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/preview.png" />
+<a href="http://hetcheckgesprek.nl?venue=Uw%20Bedrijf"><img style="float: right;" align="right" width="400" src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/preview.png" /></a>
 
 **Omdat er momenteel een wildgroei aan Corona apps ontstaat die in sommige gevallen lijken "te vergeten" rekening te houden met de privacy** van potentieel onwetende gebruikers vond Waits.App het belangrijk een gratis downloadbare en tevens [online toegankelijke](http://hetcheckgesprek.nl) CheckGesprek app gratis en volledig inzichtelijk ter beschikking te stellen.
 
