@@ -1,9 +1,3 @@
-<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/github/languages/code-size/waitsapp-open/checkgesprek">
-
-<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/website?down_message=offline&label=hetcheckgesprek.nl&up_color=green&up_message=online&url=http%3A%2F%2Fhetcheckgesprek.nl">
-
-<img style="float: right; margin-right:10px;" align="right" src="https://img.shields.io/github/license/WaitsApp-Open/checkgesprek">
-
 **Kortom:**
 &nbsp;
 
@@ -14,6 +8,7 @@
 - [x] **[Klik hier](#hoe-kunt-u-de-checkgesprek-app-inzetten) voor de [installatie/gebruiks-instructies](#hoe-kunt-u-de-checkgesprek-app-inzetten)**
 &nbsp;
 
+<img src="https://img.shields.io/github/languages/code-size/waitsapp-open/checkgesprek"> <img src="https://img.shields.io/website?down_message=offline&label=hetcheckgesprek.nl&up_color=green&up_message=online&url=http%3A%2F%2Fhetcheckgesprek.nl"> <img src="https://img.shields.io/github/license/WaitsApp-Open/checkgesprek">
 # De *écht* privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
 ### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](http://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
 
