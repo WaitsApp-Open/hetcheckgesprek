@@ -29,12 +29,14 @@ Deze checkgesprek app is een javascript aangestuurde pagina. Javascript is een p
 ### De twee manieren om CheckGesprek te gebruiken:
 
 1. U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten:
- - `venue=UW NAAM`
- - `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
+    *  `venue=UW NAAM` (urlencode deze bij voorkeur)
+    *  `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
+    *  Bijvoorbeeld een volledige url voor L'Escargot met voorkeurstaal Frans: `http://hetcheckgesprek.nl?venue=La%20Parissienne&lang=fr`
 
 2. U kunt ook uw eigen versie hosten. Klik hiervoor op "[download](https://github.com/WaitsApp-Open/hetcheckgesprek/archive/master.zip)" pak  de zip uit en plaats die vervolgens in zijn geheel op uw domein. De checkgesprek app zal dan direct werken door naar `uwdomein.nl/folder_van_checkgesprek` te gaan.
 
-&nbsp;
+## &nbsp;
+
 ### Wie is Waits.App? (bouwer van de gratis CheckGesprek App)
 **[Waits.App](https://waits.app) ontwikkelde een "digitale wachtrij op WhatsApp" voor wachtrij beheer voor horecazaken en andere bedrijven die veel met passanten werken.**
 
