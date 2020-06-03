@@ -1,5 +1,4 @@
-**Kortom:**
-&nbsp;
+### **In het kort:**
 
 - [x] Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webapp opgeslagen.
 - [x] Er zit ook geen analytics of tracking codes ingebouwd in deze pagina.
