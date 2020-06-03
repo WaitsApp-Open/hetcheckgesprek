@@ -1,9 +1,16 @@
-**TLDR;**
+<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/github/repo-size/WaitsApp-open/checkgesprek?label=file%20size">
 
-- Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webapp opgeslagen.
-- Er zit ook geen analytics of tracking codes ingebouwd in deze pagina.
-- Tevens vraagt deze pagina NIET om op een locatie in te checken of uw gegevens achter te laten, bijvoorbeeld ten behoeve van contactonderzoek.
-- Elke handeling die u op deze app pleegt, wordt alleen op de lokale pagina in de browser verwerkt. En dus nergens naar toe verzonden of opgeslagen.
+<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/website?down_message=offline&label=hetcheckgesprek.nl&up_color=green&up_message=online&url=http%3A%2F%2Fhetcheckgesprek.nl">
+
+<img style="float: right; margin-right:10px;" align="right" src="https://img.shields.io/github/license/WaitsApp-Open/checkgesprek">
+
+**Kortom:**
+
+- [x] Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webapp opgeslagen.
+- [x] Er zit ook geen analytics of tracking codes ingebouwd in deze pagina.
+- [x] Tevens vraagt deze pagina NIET om op een locatie in te checken of uw gegevens achter te laten, bijvoorbeeld ten behoeve van contactonderzoek.
+- [x] Elke handeling die u op deze app pleegt, wordt alleen op de lokale pagina in de browser verwerkt. En dus nergens naar toe verzonden of opgeslagen.
+- [x] **[Klik hier](#hoe-kunt-u-de-checkgesprek-app-inzetten) voor de [installatie/gebruiks-instructies](#hoe-kunt-u-de-checkgesprek-app-inzetten)**
 
 
 ## De echt privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
@@ -24,20 +31,26 @@ De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens e
 **Deze Check Gesprek app is gratis beschikbaar voor een ieder die dit wil gebruiken. We vragen u vriendelijk de link naar onze site https://waits.app te laten staan indien u deze checkgesprek app op uw eigen website plaatst.**
 
 
-### Hoe kunt u de CheckGesprek app inzetten?
+### Twee manieren om CheckGesprek te gebruiken:
 
-- U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten: `venue=UW NAAM` en `lang=nl` waarbij momenteel lang (language) in 2 talen beschikbaar is: en(gels) en nl.
+1. U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten:
+ -- `venue=UW NAAM`
+ -- `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
 
-- U kunt er ook voor kiezen hierboven op "download" te drukken en de zip die u krijgt in zijn geheel op uw domein te plaatsen. De checkgesprek app zal dan werken door naar `uwdomain.nl/folder_van_checkgesprek` te gaan. *Indien u van deze optie gebruik maakt vragen we u vriendelijk de link naar "waits.app" onderin de app te laten staan, alsmede de link naar deze Github broncode, zodat gebruikers weten waar ze hun "checkgesprek" afnemen en deze code ook volledig voor hen inzichtelijk is.*
+2. U kunt ook uw eigen versie hosten. Klik hiervoor op "[download](https://github.com/WaitsApp-Open/hetcheckgesprek/archive/master.zip)" pak  de zip uit en plaats die vervolgens in zijn geheel op uw domein. De checkgesprek app zal dan direct werken door naar `uwdomein.nl/folder_van_checkgesprek` te gaan.
 
-### Wie is Waits.App? (bouwer van deze CheckGesprek App)
-**Waits.App ontwikkelde een "digitale host op WhatsApp" voor wachtrij beheer voor horecazaken en andere bedrijven die veel met passanten werken.**
+### Wie is Waits.App? (bouwer van de gratis CheckGesprek App)
+**[Waits.App](https://waits.app) ontwikkelde een "digitale wachtrij op WhatsApp" voor wachtrij beheer voor horecazaken en andere bedrijven die veel met passanten werken.**
+
+> Met Waits.App wordt zelfs het wachten leuk!
 
 Het is een nieuw initiatief wat ontstaan is uit een acute wens van mijn broer. Hij heeft een pannekoeken restaurant met veel passanten. Deze staan normaal in een wachtrij.
 
 Dat is nu niet zo handig. Dus met [Waits.App](https://waits.app) kan hij op een aantal borden communiceren dat gasten via WhatsApp zichzelf in een digitale wachtrij kunnen plaatsen.
 
-De restaurant medewerkers zien op een website de wachtrij aangroeien met gewenste hoeveelheid personen per tafel. Wanneer een tafel vrij komt kunnen ze eenvoudig de gast met 1 druk op de knop oproepen.
+Zijn medewerkers zien op een website de wachtrij aangroeien met gewenste hoeveelheid personen per tafel. Wanneer een tafel vrij komt kunnen ze eenvoudig de gast met 1 druk op de knop oproepen. De gast ontvangt dan via WhatsApp een oproepbericht met "handen was instructie" en tafelplattegrond.
+
+Waits.App kan worden ingezet voor restaurants, maar ook kappers of bijvoorbeeld kleine zaken, waar nu ivm. capaciteitsrestricties al snel een wachtrij buiten ontstaat. Met Waits.App kunnen bezoekers asynchroon wachten in plaats van zich te ergeren in een fysieke wachtrij.
 
 **Bekijk anders de 1-minuut uitleg video van Waits.App:**
 - **NL** https://www.youtube.com/watch?v=Q205u19SzVI
