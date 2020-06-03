@@ -1,22 +1,23 @@
-<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/github/repo-size/WaitsApp-open/checkgesprek?label=file%20size">
+<img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/github/languages/code-size/waitsapp-open/checkgesprek">
 
 <img style="float: right; margin-right: 10px;" align="right" src="https://img.shields.io/website?down_message=offline&label=hetcheckgesprek.nl&up_color=green&up_message=online&url=http%3A%2F%2Fhetcheckgesprek.nl">
 
 <img style="float: right; margin-right:10px;" align="right" src="https://img.shields.io/github/license/WaitsApp-Open/checkgesprek">
 
 **Kortom:**
+&nbsp;
 
 - [x] Vanuit de gedachte zo veilig mogelijk om te gaan met gevoelige medische data, wordt NIKS van deze webapp opgeslagen.
 - [x] Er zit ook geen analytics of tracking codes ingebouwd in deze pagina.
 - [x] Tevens vraagt deze pagina NIET om op een locatie in te checken of uw gegevens achter te laten, bijvoorbeeld ten behoeve van contactonderzoek.
 - [x] Elke handeling die u op deze app pleegt, wordt alleen op de lokale pagina in de browser verwerkt. En dus nergens naar toe verzonden of opgeslagen.
 - [x] **[Klik hier](#hoe-kunt-u-de-checkgesprek-app-inzetten) voor de [installatie/gebruiks-instructies](#hoe-kunt-u-de-checkgesprek-app-inzetten)**
+&nbsp;
 
-
-## De echt privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
+# De *écht* privacy vriendelijke Check Gesprek app *zonder winstoogmerk of data aggregatie en contact tracing.*
 ### Volledig gratis te gebruiken, eenvoudig te installeren, via de [gratis gehoste versie](http://hetcheckgesprek.nl) of de gratis versie te plaatsen op  uw eigen website.
 
-<img style="float: right;" align="right" width="400" src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/preview.png" />
+<img style="float: right;" align="right" width="400" src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/preview.png" />
 
 **Omdat er momenteel een wildgroei aan Corona apps ontstaat die in sommige gevallen lijken "te vergeten" rekening te houden met de privacy** van potentieel onwetende gebruikers vond Waits.App het belangrijk een gratis downloadbare en tevens [online toegankelijke](http://hetcheckgesprek.nl) CheckGesprek app gratis en volledig inzichtelijk ter beschikking te stellen.
 
@@ -30,8 +31,8 @@ De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens e
 
 **Deze Check Gesprek app is gratis beschikbaar voor een ieder die dit wil gebruiken. We vragen u vriendelijk de link naar onze site https://waits.app te laten staan indien u deze checkgesprek app op uw eigen website plaatst.**
 
-
-### Twee manieren om CheckGesprek te gebruiken:
+&nbsp;
+### De twee manieren om CheckGesprek te gebruiken:
 
 1. U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten:
  -- `venue=UW NAAM`
@@ -39,6 +40,7 @@ De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens e
 
 2. U kunt ook uw eigen versie hosten. Klik hiervoor op "[download](https://github.com/WaitsApp-Open/hetcheckgesprek/archive/master.zip)" pak  de zip uit en plaats die vervolgens in zijn geheel op uw domein. De checkgesprek app zal dan direct werken door naar `uwdomein.nl/folder_van_checkgesprek` te gaan.
 
+&nbsp;
 ### Wie is Waits.App? (bouwer van de gratis CheckGesprek App)
 **[Waits.App](https://waits.app) ontwikkelde een "digitale wachtrij op WhatsApp" voor wachtrij beheer voor horecazaken en andere bedrijven die veel met passanten werken.**
 
@@ -57,3 +59,4 @@ Waits.App kan worden ingezet voor restaurants, maar ook kappers of bijvoorbeeld 
 - **EN** https://www.youtube.com/watch?v=7RM_ezLLwbw
 
 ### Check ook de Waits.App demo & uitleg via [waits.app](https://waits.app)
+<a href="https://www.youtube.com/watch?v=Q205u19SzVI"><img src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/youtube-preview.png" />
