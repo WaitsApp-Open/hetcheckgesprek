@@ -17,7 +17,7 @@
 
 Deze checkgesprek app is een javascript aangestuurde pagina. Javascript is een programmeertaal die haar functionaliteiten "client-side", dat wil zeggen in de browser van de gebruiker uitvoert, zonder hiervoor afhankelijk te zijn van een internetverbinding, of data dient te versturen naar een server over een online verbinding.
 
-De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens en in het kader van het CheckGesprek is het daarom niet geoorloofd bij het maken van een online reservering direct de antwoorden op de Corona vragen op te slaan of te verwerken via een interverbinding. Dat doet deze app dan ook NIET. U kunt uw device (na het openen van de pagina) volledig van internet halen (airplane modus) of zelfs een offline versie van deze app downloaden en lokaal draaien.
+**De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens** en in het kader van het CheckGesprek is het daarom niet geoorloofd bij het maken van een online reservering direct de antwoorden op de Corona vragen op te slaan of te verwerken via een interverbinding. Dat doet deze app dan ook NIET. U kunt uw device (na het openen van de pagina) volledig van internet halen (airplane modus) of zelfs een offline versie van deze app downloaden en lokaal draaien.
 
 **Waits.App vindt privacy een groot goed en vindt ook dat**, hoe goed bedoelt ook, individuele initiatieven die beantwoorden aan de wens van bedrijven om de **Check Gesprekken** zo vlot mogelijk te laten verlopen, **niet mogen worden gebruikt om all-in-one oplossingen te vormen voor contact-tracing**. Want waarom zou je bij een horeca zaak inchecken en je contact gegevens achterlaten, terwijl dit in de supermarkt niet hoeft of in het OV.
 
@@ -29,8 +29,8 @@ De AVG regeling is namelijk duidelijk over het verwerken van medische gegevens e
 ### De twee manieren om CheckGesprek te gebruiken:
 
 1. U kunt linken naar de door ons gehoste versie op http://hetcheckgesprek.nl. Aan deze url kunt u optioneel 2 parameters toevoegen, te weten:
- -- `venue=UW NAAM`
- -- `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
+ - `venue=UW NAAM`
+ - `lang=nl` 4 talen beschikbaar: *en*, *de*, *fr* en standaard *nl*.
 
 2. U kunt ook uw eigen versie hosten. Klik hiervoor op "[download](https://github.com/WaitsApp-Open/hetcheckgesprek/archive/master.zip)" pak  de zip uit en plaats die vervolgens in zijn geheel op uw domein. De checkgesprek app zal dan direct werken door naar `uwdomein.nl/folder_van_checkgesprek` te gaan.
 
