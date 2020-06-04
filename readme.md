@@ -51,8 +51,8 @@ Zijn medewerkers zien op een website de wachtrij aangroeien met gewenste hoeveel
 Waits.App kan worden ingezet voor restaurants, maar ook kappers of bijvoorbeeld kleine zaken, waar nu ivm. capaciteitsrestricties al snel een wachtrij buiten ontstaat. Met Waits.App kunnen bezoekers asynchroon wachten in plaats van zich te ergeren in een fysieke wachtrij.
 
 **Bekijk anders de 1-minuut uitleg video van Waits.App:**
-- **NL** https://www.youtube.com/watch?v=Q205u19SzVI
-- **EN** https://www.youtube.com/watch?v=7RM_ezLLwbw
+- **NL** https://waits.app/#video
+- **EN** https://waits.app/en/index.html#video
 
 ### Check ook de Waits.App demo & uitleg via [waits.app](https://waits.app)
-<a href="https://www.youtube.com/watch?v=Q205u19SzVI"><img src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/youtube-preview.png" />
+<a href="https://waits.app/#video"><img src="https://raw.githubusercontent.com/WaitsApp-Open/hetcheckgesprek/master/.github/youtube-preview.png" />
